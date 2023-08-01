@@ -1,4 +1,5 @@
 import { MapContainer,TileLayer } from "react-leaflet";
+import { Markers } from "./Markers";
 import "leaflet/dist/leaflet.css"
 
 export const Map = () => {
@@ -6,6 +7,7 @@ export const Map = () => {
         <>
         <MapContainer center={{lat:"4.570868",lng:"-74.297333"}} zoom={6}>
             <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributor' />
+            <Markers />
         </MapContainer>
         </>
     )
