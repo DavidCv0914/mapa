@@ -11,5 +11,17 @@ export const getDep = async (req, res) => {
       console.log(error);
       return res.status(404).json({ message: "ERROR 404", error });
     }
-  };
-  
+};
+
+export const getMun = async (req, res) => {
+  try {
+
+      const [resp] = await conexion.query(`SELECT * FROM municipios`);
+
+      res.json(resp)
+    
+  } catch (error) {
+    console.log(error);
+    return res.status(404).json({ message: "ERROR 404", error });
+  }
+};

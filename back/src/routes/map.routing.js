@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { getDep } from "../controllers/map.js";
+import { getDep, getMun } from "../controllers/map.js";
 
 export const map = Router()
 
 map.get("/getDepList", getDep);
+map.get("/getMunList", getMun);
